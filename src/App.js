@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import NavBar from "./Components/Header/NavBar";
+import Cards from "./Components/Card/Card";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <NavBar />
+        <h1 className="heading1">Latest Offers</h1>
+        <Cards
+          cardText="Super Deal"
+          name="Get HostMantis Advanced SSD Hosting Plan$5.49/mo + Money Back Guarantee"
+          val1="You will get 30 GB SSD."
+          val2="Additional SSD storage available."
+          val3="Full daily backup in this plan."
+        />
+      </div>
+    </>
   );
 }
 
